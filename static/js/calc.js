@@ -41,10 +41,10 @@ $(function() {
 
   // WRITE CODE HERE for buttons 5-9
 
-  $('#add').click(function() {
+  $('#five').click(function() {
     if (notLastOp()) {
-      var outputText = $('#output').text() + '+';
-      $('#output').text(outputText);
+      var outputText = $('#5').text() + '+';
+      $('#5').text(outputText);
     }
   });
 
