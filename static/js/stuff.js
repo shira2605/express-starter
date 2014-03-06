@@ -21,8 +21,10 @@ $('#color').click(function() {
 });
 
 
-$('#Name').val()
-alert()
+$('#greet').click(function() {
+	alert('Hello '+ $('#my_name').val());
+});
+
 
 
 // Problem 4 (Greet Me) -----------------------------------------------------

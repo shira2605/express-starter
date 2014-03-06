@@ -11,3 +11,13 @@ $('.clickable').click(function() {
 
 // Problem 5 (Imgrr) -------------------------------------------------
 // WRITE CODE HERE
+$('#toggle_img').click(function() {
+  	if ($('#toggle_img').text()=='Come Back!' ){
+    	$('#main_img').show();
+    	$('#toggle_img').text('Go Away!');
+	} else {
+    	$('#main_img').hide();
+  		$('#toggle_img').text('Come Back!');
+	}
+
+});
