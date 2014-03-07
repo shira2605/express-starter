@@ -6,18 +6,22 @@
 
 // Problem 4 (Find the Source) -------------------------------------------------
 $('.clickable').click(function() {
-  // WRITE CODE HERE
 });
 
-// Problem 5 (Imgrr) -------------------------------------------------
-// WRITE CODE HERE
+
 $('#toggle_img').click(function() {
-  	if ($('#toggle_img').text()=='Come Back!' ){
+  	if ($('#toggle_img').text()=='Come Back!'){
     	$('#main_img').show();
     	$('#toggle_img').text('Go Away!');
-	} else {
+	} 
+	else {
     	$('#main_img').hide();
   		$('#toggle_img').text('Come Back!');
 	}
-
 });
+
+$('#change_img').click(function() {
+	alert('/static/img/'+ $('#new_img_file').val());
+	$('#main_img').attr('src', ('/static/img/') + $('#new_img_file').val())
+});
+
