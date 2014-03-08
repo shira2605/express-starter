@@ -27,6 +27,7 @@ $('#img3').click(function() {
 	$('#img1').attr('src', ('/static/img') + $('#img3'))
 });
 
+
 $('#img4').click(function() {
 	$('#img1').attr('src', ('/static/img') + $('#img4'))
 });
