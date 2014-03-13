@@ -18,6 +18,29 @@ $(document).ready(function() {
     context.strokeRect(10, 10, 200, 200);
 });
 
+ 
+$('#p3').click(function() {
+	context.beginPath(); 
+	context.arc(100, 100, 100, 0, Math.PI);
+	context.closePath();
+	context.stroke()
+});
+
+
+$('#p4').click(function() {
+	context.beginPath();
+	context.arc(150, 150, 100, 0, 2*Math.PI);
+	context.closePath();
+	context.stroke()
+});
+
+$('#p5').click(function() {
+	context.beginPath();
+	context.moveTo(50, 50);
+	context.lineTo(283, 370);
+	context.closePath();
+	context.stroke()
+});
 
 });
 
