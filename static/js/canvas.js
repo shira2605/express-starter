@@ -64,6 +64,35 @@ $('#p7').click(function() {
     context.fillRect(10, 10, 200, 200);
 });
 
+$('#p9').click(function() {
+	for (var i = 1; i <= 5; i++) {
+        context.strokeRect(i*50, 50, 50, 50);
+}
+});
+
+$('#p10').click(function() {
+	for (var i = 1; i <= 100; i++) {
+		context.strokeRect(i*5, 5, 5, 5);
+}
+});
+
+$('#p11').click(function() {
+	for (var i = 1; i <= 100; i++) {
+		for (var j = 1; j<= 100; j++) {
+			context.strokeRect(i*5, j*5, 5, 5);
+		}
+	}
+		});
+
+$('#p12').click(function() {
+	for (var i = 1; i<= 20; i++) {
+	context.beginPath();
+	context.arc(200, 200, i*10, 0, 2*Math.PI);
+	context.closePath();
+	context.stroke();
+}
+});
+
 });
 
 
