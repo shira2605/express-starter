@@ -22,7 +22,17 @@ $(document).ready(function() {
     // Delete the alert when done
   };
 
-  // Write drawTriplet function here
+  var drawTriplet = function(x, y, color) {
+    drawCircle(x, y, 50, color);
+    drawCircle(x-30, y+50, 50, color);
+    drawCircle(x+30, y+50, 50, color);
+  };
+
+var drawTriangle = function(x, y, sideLen, color) {
+  
+}
+
+
 
   // Challenge:
   // Write drawTriangle, drawTriforce, drawTripleTriforce,
@@ -51,6 +61,22 @@ $(document).ready(function() {
     drawCircle(250, 350, 99, 'green');
     drawCircle(150, 250, 99, 'green');
     drawCircle(350, 250, 99, 'green');
+
+  });
+
+  $('#p6').click(function() {
+    drawTriplet(100, 80, 'green');
+  })
+
+  $('#p7').click(function() {
+    drawTriplet(315, 80, 'blue');
+  })
+
+  $('#p8').click(function() {
+    drawTriplet(100, 80, 'springgreen');
+    drawTriplet(315, 80, 'aqua');
+    drawTriplet(100, 300, 'magenta');
+    drawTriplet(315, 300, 'mediumvioletred');
 
   })
 
