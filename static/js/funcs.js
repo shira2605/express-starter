@@ -29,8 +29,22 @@ $(document).ready(function() {
   };
 
 var drawTriangle = function(x, y, sideLen, color) {
-  
+  context.beginPath();
+  context.strokeStyle=color;
+  context.fillStyle=color;
+  context.moveTo(x, y);
+  context.lineTo(x+30, y+50);
+  context.lineTo(x-30, y+50);
+  context.closePath();
+  context.stroke();
+  context.fill();
+};
+
+var drawTriforce = function(x, y, color) {
+  context.beginPath();
+  context.strokeStyle= black
 }
+
 
 
 
@@ -80,6 +94,9 @@ var drawTriangle = function(x, y, sideLen, color) {
 
   })
 
+$('#p9').click(function() {
+  drawTriangle(50, 60, 200, 'pink'); 
+})
   //---------------------------------------------------------------------------
   //Write your code for p5-p11 here
   //
