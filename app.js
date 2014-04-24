@@ -49,6 +49,10 @@ app.get('/funcs', function(req, res) {
 app.get('/ball', function(req, res) {
 	res.render('ball.html', { });
 });
+
+app.get('/chainr', function(req, res) {
+	res.render('chainr.html', { });
+});
 ///////////////////////////////////////////////////////////////////////////////
 // RUN CONFIGURATION                                                         //
 ///////////////////////////////////////////////////////////////////////////////
