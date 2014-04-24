@@ -14,12 +14,13 @@ for (var i = 0; i< numBalls; i++) {
 var b = {
   x_above: 100,
   y_above: 20,
-  radius: 25,
+  radius: 20,
   vy: 10*Math.random(),
   vx: 10*Math.random(),
 };
 balls.push(b);
 } 
+reactions = []; 
 
   var updateGame = function() {
     context.strokeStyle='white';
@@ -48,6 +49,15 @@ balls.push(b);
       balls[i].vx = 5;
     }
   }
+
+  for (var i = 0; i < reactions.length; i++) {
+    context.beginPath();
+    context.strokeStyle='red';
+    context.fillStyle='red';
+    context.arc(reactions[i].x_above, reactions[i].y_above, reactions[i].radius, 0, 2*Math.PI);
+    context.closePath();
+    context.fill()
+  }
     requestAnimationFrame(updateGame);
     //PUT STUFF HERE
   };
@@ -60,7 +70,6 @@ balls.push(b);
        // Find the mouse x and y relative to the top-left corner of the canvas
     var x = e.pageX - $(this).offset().left;
     var y = e.pageY - $(this).offset().top;
-  for (var i = 0; i< numBalls; i++) {
   var b = {
   x_above: x,
   y_above: y,
@@ -68,8 +77,7 @@ balls.push(b);
   vy: 10*Math.random(),
   vx: 10*Math.random(),
 };
-balls.push(b);
-} 
+reactions.push(b);
 
     // PUT STUFF HERE
   });
