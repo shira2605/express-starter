@@ -49,11 +49,16 @@ reactions = [];
       balls[i].vx = 5;
     }
   }
+  for (var i = 0; i< reactions.length; i++) {
+    if (reactions[i].radius < 30) {
+      reactions[i].radius = reactions[i].radius + 1; 
+    }
+}
 
   for (var i = 0; i < reactions.length; i++) {
     context.beginPath();
-    context.strokeStyle='red';
-    context.fillStyle='red';
+    context.strokeStyle='pink';
+    context.fillStyle='pink';
     context.arc(reactions[i].x_above, reactions[i].y_above, reactions[i].radius, 0, 2*Math.PI);
     context.closePath();
     context.fill()
@@ -73,7 +78,7 @@ reactions = [];
   var b = {
   x_above: x,
   y_above: y,
-  radius: 30,
+  radius: 1,
   vy: 10*Math.random(),
   vx: 10*Math.random(),
 };
