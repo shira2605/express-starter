@@ -63,6 +63,19 @@ reactions = [];
     context.closePath();
     context.fill()
   }
+
+  for (var i = 0; i < balls.length; i++) {
+        for (var j = 0; j < reactions.length; j++) {
+                var xdiff = balls[i].x_above - reactions[j].x_above;
+                var ydiff = balls[i].y_above - reactions[j].y_above;
+                var dist = Math.sqrt(xdiff*xdiff + ydiff*ydiff);
+                console.log(dist);
+        if (dist < balls[i].radius + reactions[j].radius) {
+          alert('boom'); 
+        }       
+        }
+}
+
     requestAnimationFrame(updateGame);
     //PUT STUFF HERE
   };
