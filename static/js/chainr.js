@@ -65,14 +65,18 @@ reactions = [];
   }
 
   for (var i = 0; i < balls.length; i++) {
+    var collided = false 
         for (var j = 0; j < reactions.length; j++) {
                 var xdiff = balls[i].x_above - reactions[j].x_above;
                 var ydiff = balls[i].y_above - reactions[j].y_above;
                 var dist = Math.sqrt(xdiff*xdiff + ydiff*ydiff);
-                console.log(dist);
-        if (dist < balls[i].radius + reactions[j].radius) {
-          alert('boom'); 
-        }       
+          if (dist < balls[i].radius + reactions[j].radius) {
+            collided = true; 
+          }   
+          if (collided === true) {
+            balls.splice(i, 1); 
+            i = i - 1; 
+          }    
         }
 }
 
