@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   // Run an interation of the game
 var balls = []; 
-numBalls = 3
+numBalls = 20
 for (var i = 0; i< numBalls; i++) {
 var b = {
   x_above: 100,
@@ -73,16 +73,22 @@ reactions = [];
           if (dist < balls[i].radius + reactions[j].radius) {
             collided = true; 
           }   
-          if (collided === true) {
+        }   
+        if (collided === true) {
+            var c = {
+              x_above: balls[i].x_above,
+              y_above: balls[i].y_above,
+              radius: 1
+            };
+            reactions.push(c); 
             balls.splice(i, 1); 
-            i = i - 1; 
-          }    
+            i = i - 1;  
         }
-}
+      }
 
     requestAnimationFrame(updateGame);
     //PUT STUFF HERE
-  };
+  }
  
 
 
