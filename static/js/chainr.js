@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   // Run an interation of the game
 var balls = []; 
-numBalls = 20
+numBalls = 100
 for (var i = 0; i< numBalls; i++) {
 var b = {
   x_above: 100,
