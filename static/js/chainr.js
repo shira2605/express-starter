@@ -21,6 +21,8 @@ var b = {
 balls.push(b);
 } 
 reactions = []; 
+var reacting = false 
+var numReacted = 0
 
   var updateGame = function() {
     context.strokeStyle='white';
@@ -92,11 +94,15 @@ reactions = [];
             reactions.push(c); 
             balls.splice(i, 1); 
             i = i - 1;  
+            numReacted = numReacted + 1;  
         }
       }
 
     requestAnimationFrame(updateGame);
     //PUT STUFF HERE
+    context.fillStyle = "lightgreen"; 
+    context.font = "20px Comic Sans";
+    context.fillText('Reactions:' + numReacted , 1, 50); 
   }
  
 
@@ -104,7 +110,8 @@ reactions = [];
 
   // Handle a canvas click event
   $('#game_canvas').click(function(e) {
-       // Find the mouse x and y relative to the top-left corner of the canvas
+  if (reacting === false) {
+    // Find the mouse x and y relative to the top-left corner of the canvas
     var x = e.pageX - $(this).offset().left;
     var y = e.pageY - $(this).offset().top;
   var b = {
@@ -116,6 +123,9 @@ reactions = [];
   timer: 0
 };
 reactions.push(b);
+reacting = true 
+ } 
+
 
     // PUT STUFF HERE
   });
